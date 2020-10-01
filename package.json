@@ -1,0 +1,19 @@
+{
+  "name": "fucker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asim-v/putidiputados.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asim-v/putidiputados/issues"
+  },
+  "homepage": "https://github.com/asim-v/putidiputados#readme"
+}
