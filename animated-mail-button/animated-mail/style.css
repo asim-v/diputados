@@ -444,8 +444,14 @@ body {
     top: 38px;
   }
 }
-footer{
+footer a{
   color: #454545;
   top:0;
-  position: absolute;
+  width: 100%;
+  left: 0;
+  left: 50%;
+  text-align: center;
+  position:fixed;
+  left: 0;
+  font-size: 13px;
 }
