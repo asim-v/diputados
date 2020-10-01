@@ -114,8 +114,10 @@
       function updateSigninStatus(isSignedIn) {
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
+          if ('contributed' not in document.cookie){
+            sendEmail();  
+          }
           
-          sendEmail();
         } else {
           authorizeButton.style.display = 'block';
           
@@ -173,6 +175,8 @@
 
     function sendEmail()
     {
+      document.cookie = "contributed = True;";
+
       document.getElementById('titles').innerHTML = 'Gracias!❤️ <br><bR>Debemos presionar al gobierno<bR> para que no recorten los fideicomisos';
       document.getElementById('success-checkmark').style.display='-webkit-box';
 
@@ -219,5 +223,8 @@
 
 
 
-  
+<footer>
+  <p>Sitio independiente no vinculado con alguna de las organizaciones mencionadas</p>
+  <!-- <p><a href="mailto:hege@example.com">hege@example.com</a></p> -->
+</footer>
 </html>

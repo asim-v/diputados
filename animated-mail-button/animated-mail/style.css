@@ -444,3 +444,8 @@ body {
     top: 38px;
   }
 }
+footer{
+  color: #454545;
+  top:0;
+  position: absolute;
+}
