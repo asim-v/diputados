@@ -469,6 +469,7 @@ body {
 footer a{
   color: #454545;
   top:0;
+  z-index: 200;
   width: 100%;
   left: 0;
   left: 50%;
