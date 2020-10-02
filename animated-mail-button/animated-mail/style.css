@@ -19,8 +19,24 @@ body {
   background-repeat: round;
   background-size: 400px auto;  
 }
-
+.disclaimer{
+  width: 60%;
+  padding-left: 50px;
+  text-align: left;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #7B7B7B;
+}
 .mail-box {
+  width:120px;
+  height:60px;
+  margin-left:35px;
+  display:block;
+  background-color:gray;
+  color:white;
+  border: none;
+  outline:none;  
   border:transparent;
   background-color: transparent;
   position: fixed;
@@ -253,13 +269,18 @@ body {
   .titles{
     color: white;
     text-align:left;
-    font-size: 40px;
+    font-size: 37px;
     padding-left: 10px;
     padding-top: 350px;
     
   }
   .mail-box{
     padding-top: 35%;
+  }
+  .disclaimer{
+    padding-left: 80px;
+    padding-right: 100px;
+    font-size: 12px;
   }
 }
 @media (max-width: 350px) {
@@ -454,4 +475,15 @@ footer a{
   position:fixed;
   left: 0;
   font-size: 13px;
+}
+input[type="button"]
+{
+    width:120px;
+    height:60px;
+    margin-left:35px;
+    display:block;
+    background-color:gray;
+    color:white;
+    border: none;
+    outline:none;
 }
