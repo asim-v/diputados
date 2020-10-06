@@ -28,20 +28,16 @@ body {
 }
 
 .home{
-  position: absolute;
-  text-align: left;
-  top:50vh;
-  width: 75%;
-  vertical-align: middle;
-  text-align: center;
-  padding-bottom: 15px;
-  
-  
-  
-  font-size: 35px;
-  font-family: 'Inter-Loom',sans-serif !important;
-  font-weight: 700;
-  color: #7B7B7B;
+    position: absolute;
+    text-align: left;
+    top: 50vh;
+    width: 75%;
+    vertical-align: middle;
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-family: 'Roboto';
+    color: #585454;
 }
 
 
@@ -442,6 +438,7 @@ body {
 }
 @media (max-width: 321px){
    .home{
+    top: 60vh;
     font-size: 15px;
   }
 }
