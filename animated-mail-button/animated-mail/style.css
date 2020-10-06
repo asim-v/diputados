@@ -3,37 +3,56 @@
   padding: 0;
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html{
+  -ms-zoom:90%;
+}
 
 body {
+  zoom:90%;
   display: flex; /* establish flex container */
   justify-content: center; /* center flex items horizontally, in this case */
   align-items: center; /* center flex items vertically, in this case */  
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Inter-Loom', sans-serif !important;
   font-weight: 700 !important; 
   padding-top: 50px;
   font-size: 18px;
-  background-image: url('https://i.imgur.com/ozL1UIg.png');
+  background-image: url('background.png');
   overflow: hidden;
-  background-repeat: round;
+  background-repeat: repeat;
   background-size: 400px auto;  
 }
 .disclaimer{
-  width: 60%;
-  padding-left: 50px;
+  position: absolute;
   text-align: left;
+  top:-90px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 15px;
+  
+  font-size: 15px;
+  
   font-size: 20px;
-  font-family: 'Montserrat',sans-serif !important;
+  font-family: 'Inter-Loom',sans-serif !important;
   font-weight: 700;
   color: #7B7B7B;
 }
+
+:root{
+  --mheight:150px;/*var(--mheight)*/
+  --mwidth:300px;/*var(--mwidth)*/
+  --lwidth:calc(var(--mwidth)*2);
+  --hheight:calc(var(--mheight)/2);
+  --hwidth:calc(var(--mwidth)/2);
+}
+
 .mail-box {
-  width:120px;
-  height:60px;
-  margin-left:35px;
+  /*margin-left:35px;*/
   display:block;
-  background-color:gray;
+  /*background-color:gray;*/
   color:white;
   border: none;
   outline:none;  
@@ -41,20 +60,22 @@ body {
   background-color: transparent;
   position: fixed;
   top: 55%;
+
+  width: var(--lwidth);
+  height: var(--mheight);
+
   left: 50%;
-  width: 600px;
-  height: 400px;
   transform: translate(-50%, -50%);
   cursor: pointer;
 }.mail-box button{
   background-color: transparent;
-
 }
 
 .matter {
+  border-radius: 15px;
   position: absolute;
-  width: 600px;
-  height: 300px;
+  width: var(--lwidth);
+  height: var(--mwidth);
   transition: .5s;
 }
 .matter .main-hyp {
@@ -63,48 +84,68 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 0 300px 600px;
-  border-color: transparent transparent #eb4c44 transparent;
+  border-width: var(--mwidth) var(--mwidth) var(--mheight);
+  border-radius: 15px;
+  border-color: transparent transparent #db4a4a transparent;
   z-index: 2;
 }
 .matter .top-fold {
+  border-radius: 15px;
   position: absolute;
   /*top: 50px;*/
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 150px 300px 0 300px;
-  transform-origin: 50% 0%;
+  border-width: var(--mheight) var(--mwidth) 0 var(--mwidth);
+  transform-origin: 50% 2%;
   transition: transform .4s .4s, z-index .2s .4s;
-  border-color: #cf4a43 transparent transparent transparent;
+  border-color: #dc373f transparent transparent transparent;
   z-index: 2;
 }
 .matter .back-fold {
+  border-radius: 15px;
   position: absolute;
   bottom: 0;
-  width: 600px;
-  height: 300px;
-  background: #cf4a43;
+  width: var(--lwidth);
+  height: var(--mwidth);
+  background: #c9323a;
   z-index: 0;
 }
 .matter .left-fold {
+  border-radius: 15px;
   position: absolute;
   bottom: 0;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 150px 0 150px 300px;
-  border-color: transparent transparent transparent #e15349;
+  border-width: var(--mheight) 0 var(--mheight) var(--mwidth);
+  border-color: transparent transparent transparent #e1494c;
   z-index: 2;
 }
+.matter .right-fold {
+  transform: scaleX(-1);
+  right: 0;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: var(--mheight) 0 var(--mheight) var(--mwidth);
+  border-color: transparent transparent transparent #d43b3e;
+  z-index: 2;
+}
+
 .matter .letter {
-  left: 30px;
+  border-radius: 5px;
+  left: calc(var(--lwidth) / 20);
   bottom: 0px;
   position: absolute;
-  width: 540px;
-    color: #2B2B2B !important;
+  width:calc(var(--lwidth) * 0.9);
+  
+  color: #2B2B2B !important;
 
-  height: 100px;
+  height: calc(var(--hheight));
   background: white;
   z-index: 1;
   overflow: hidden;
@@ -128,7 +169,7 @@ body {
 }
 .matter .letter .block1 {
   position: absolute;
-  width: 150px;
+  width: var(--mheight);
   height: 16px;
   background: #e15349;
   bottom: 55%;
@@ -142,7 +183,7 @@ body {
   bottom: 50%;
   left: 15%;
 }
-.matter .letter .stamp {
+/*.matter .letter .stamp {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -154,27 +195,11 @@ body {
   vertical-align: middle;
   font-weight: 900;
   border: 4px solid lightgray;
-}
+}*/
 .matter .letter .letter-border {
   height: 20px;
   width: 100%;
   background: repeating-linear-gradient(-45deg, #cb5a5e, #cb5a5e 8px, transparent 8px, transparent 18px);
-}
-
-.shadow {
-  position: absolute;
-  top: 400px;
-  left: 50%;
-  width: 900px;
-  height: 100px;
-  transition: .4s;
-  transform: translateX(-50%);
-  -webkit-transition: .4s;
-  -webkit-transform: translateX(-50%);
-  -moz-transition: .4s;
-  -moz-transform: translateX(-50%);
-  border-radius: 100%;
-  background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 .mail-box:hover .matter {
@@ -195,7 +220,7 @@ body {
   height: 500px;
 }
 .mail-box:hover .shadow {
-  width: 600px;
+  width: var(--lwidth);
 }
 
 .card {
@@ -257,9 +282,11 @@ body {
 }
 
 .titles{
+  width: 90%;
+  font-family: monospace;
   z-index: 100;
   position: absolute;
-  color: white;
+  color:#2B2B2B;
   text-align:center;
   font-size: 50px;
   padding-top: 30vh;
@@ -268,7 +295,7 @@ body {
 @media (max-width: 600px) {
   
   .titles{
-    color: white;
+    color:#2B2B2B;
     text-align:left;
     font-size: 37px;
     padding-left: 10px;
@@ -276,18 +303,62 @@ body {
     
   }
   .mail-box{
-    padding-top: 35%;
+    padding-top: 0%1
+    width 90%;
+    top: 65%;
   }
   .disclaimer{
-    padding-left: 80px;
+    position: relative;
+    text-align: left;
+    top: 0;
+    
+    width: 100%;
+    
+    
+    font-size: 15px;
+  }
+}
+@media (max-width: 561px) {
+  :root{
+    --mwidth:160px;
+    --mheight:60px;
+  }
+  
+  .titles{
+    width: 80%;
+    color:#2B2B2B;
+    text-align:left;
+    font-size: 30px;
+    padding-left: -20px;
+    padding-top: 280px;
+    
+  }
+  .ball{
+    margin: 150px auto 0 !important;
+    font-size:45px !important;
+  }
+  .mail-box{
+    padding-top: 0%;
+  }
+  .overlay{
+    width: 50%;
+    font-size: 15px !important;
+  }
+  .disclaimer{
+    position: relative;
+    text-align: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
     padding-right: 100px;
     font-size: 12px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 290px) {
   
   .titles{
-    color: white;
+    color:#2B2B2B;
     text-align:left;
     font-size: 30px;
     padding-left: 10px;
@@ -297,18 +368,62 @@ body {
   .mail-box{
     padding-top: 35%;
   }
+  .disclaimer{
+    position: relative;
+    text-align: left;
+    top: 0;
+    left: 10px;
+    width: 36%;
+    padding-left: 120px;
+    padding-right: 100px;
+    font-size: 12px;
+  }
 }
-
 .ball {
-  bottom: 130px;
+  bottom: calc(var(--mheight) + (var(--mheight))/2);
+
   font-size: 60px;
-  left: 44%;  
+  transform: translate(-50%,50%);
   border-radius: 50%;
   margin: 200px auto 0;
   animation: ball 300ms cubic-bezier(0.165, 0.840, 0.440, 1.000) infinite alternate;
   animation-delay: 0;
   z-index: 10;
+  position: relative;
+}
+
+.overlay {
+  padding: 15px;
+  bottom: 50px;
+  border-radius: 15px;
+  font-size: 30px;
+  left: 0; 
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%,50%);
+  width: 70%;
+  font-family: monospace;
+  
+  margin: 200px auto 0;
+  background-color: #0000004f;
+  z-index: 10;
   position: absolute;
+  display: inline;
+  backdrop-filter:blur(5px) ;
+
+}
+.counter{
+  background-color: #00ff2042;
+  color: #26ff2f;
+  font-family: monospace;
+  font-weight: 600;
+  border-radius: 9px;
+  padding-left: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 20px;
+  
+  display: inline;
 }
 
 @keyframes ball {
