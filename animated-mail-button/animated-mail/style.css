@@ -383,7 +383,7 @@ body {
 }
 @media (max-width: 900px){
     .home{
-      font-size: 28px;
+      font-size: 28px !important;
     }
 }
 @media (max-width: 600px) {
@@ -412,7 +412,7 @@ body {
   }
    .home{
     width: 90%;
-    font-size: 25x;
+    font-size: 25px !important;
   }
 }
 @media (max-width: 561px) {
@@ -453,13 +453,13 @@ body {
   }
   .home{
     top: 49vh;
-    font-size: 13.5px;
+    font-size: 13.5px !important;
   }
 }
 @media (max-width: 321px){
    .home{
     top: 55vh;
-    font-size: 11px;
+    font-size: 11px !important;
   }
   .titles{
     font-size: 23px;
