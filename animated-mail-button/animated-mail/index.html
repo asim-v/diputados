@@ -91,7 +91,7 @@
      database.ref().update({count:parseInt(document.getElementById('counter').innerHTML) + 1});
    }
      
-  var speed = 0.0000001;
+  var speed = 0.00000007;
 
   /* Call this function with a string containing the ID name to
    * the element containing the number you want to do a count animation on.*/
@@ -106,7 +106,7 @@
     if (i <= endNbr) {
       elt.innerHTML = i;
       setTimeout(function() {//Delay a bit before calling the function again.
-        incNbrRec(i + 32345610, endNbr, elt);
+        incNbrRec(i + 32340000, endNbr, elt);
       }, speed);
     }
   }
