@@ -20,24 +20,37 @@ body {
   font-weight: 700 !important; 
   padding-top: 50px;
   font-size: 18px;
-  background-image: url('background.png');
+  background-color: #181a1b;
+  
   overflow: hidden;
   background-repeat: repeat;
   background-size: 400px auto;  
 
 }
 
+.help{
+  /*position: absolute;*/
+  top: 10vh;
+  color: white;
+  border-radius: 50%;
+  padding: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: darkgrey;
+}
+
 .home{
+    max-height: 80vh;
     position: absolute;
     text-align: left;
-    top: 50vh;
+    top: 45vh;
     width: 75%;
     vertical-align: middle;
     text-align: center;
     padding-bottom: 15px;
     font-size: 30px;
     font-family: 'Roboto';
-    color: #585454;
+    color:rgb(178, 171, 161);
 }
 
 
@@ -48,7 +61,7 @@ body {
     -webkit-appearance: none;
     background: #4bff006e;
     backdrop-filter: blur(5px);
-    color: #319f39;
+    color: #0aff1c;
     background-size: 500%;
     border: none;
     border-radius: 5rem;
@@ -354,23 +367,28 @@ body {
 
 .titles{
   width: 90%;
+
   font-family: monospace;
   z-index: 100;
   position: absolute;
-  color:#2B2B2B;
+  color:rgb(205, 200, 194);
   text-align:center;
   font-size: 50px;
   padding-top: 30vh;
   
 }
 .titles a{
-  color:#2B2B2B !important;
+  color:rgb(205, 200, 194) !important;
   text-decoration: none !important;
+}
+@media (max-width: 900px){
+    .home{
+      font-size: 28px;
+    }
 }
 @media (max-width: 600px) {
   
   .titles{
-    color:#2B2B2B;
     text-align:left;
     font-size: 37px;
     padding-left: 10px;
@@ -394,7 +412,7 @@ body {
   }
    .home{
     width: 90%;
-    font-size: 25px;
+    font-size: 25x;
   }
 }
 @media (max-width: 561px) {
@@ -405,9 +423,9 @@ body {
   
   .titles{
     width: 80%;
-    color:#2B2B2B;
+    
     text-align:left;
-    font-size: 30px;
+    font-size: 28px;
     padding-left: -20px;
     padding-top: 280px;
     
@@ -434,19 +452,23 @@ body {
     font-size: 12px;
   }
   .home{
-    font-size: 20px;
+    top: 49vh;
+    font-size: 13.5px;
   }
 }
 @media (max-width: 321px){
    .home{
-    top: 60vh;
-    font-size: 15px;
+    top: 55vh;
+    font-size: 11px;
+  }
+  .titles{
+    font-size: 23px;
   }
 }
 @media (max-width: 290px) {
   
   .titles{
-    color:#2B2B2B;
+    
     text-align:left;
     font-size: 30px;
     padding-left: 10px;

@@ -14,16 +14,7 @@
    <!--Add buttons to initiate auth sequence and sign out-->
    <button id="signout_button" style="display: none;z-index: 10;">Sign Out</button>
    <pre id="content" style="white-space: pre-wrap;"></pre>
-   <div class="titles" id="titles">
-      <e style="color:red;background-color: #ff000033;padding-left:20px;padding-right: 20px;padding-top: 2px;padding-bottom: 2px;border-radius: 50px;">ULTIMA OPORTUNIDAD</e><br>
-      <e style="color:red;background-color: #ff000033;padding-left:20px;padding-right: 20px;padding-top: 2px;padding-bottom: 2px;border-radius: 50px;" id="nbr">24965000000</e>
-      <br>De pesos buscan recortarse<br> 
-      
-      de 
-      <e style="color:red;background-color: #ff000033;padding-left:20px;padding-right: 20px;padding-top: 2px;padding-bottom: 2px;border-radius: 50px;">91</e>
-      fideicomisos del CONACYT <e style="color:red;background-color: #ff000033;padding-left:20px;padding-right: 20px;padding-top: 2px;padding-bottom: 2px;border-radius: 50px;">(todos)</e>
-      <a href="help.html" class="help">?</a>
-   </div>
+
    <div class="success-checkmark" id="success-checkmark" style="display: none">
       <div class="check-icon">
          <span class="icon-line line-tip"></span>
@@ -32,8 +23,18 @@
          <div class="icon-fix"></div>
       </div>
    </div>
-   <div class='home '>
-      Antes de que esta iniciativa pueda concretarse, es necesario que pase a un análisis en el Senado de la Republica, erigida como Cámara revisora. Será este el<e style="color:red;background-color: #ff000033;padding-left:20px;padding-right: 20px;padding-top: 2px;padding-bottom: 2px;border-radius: 50px;">último momento</e> donde la iniciativa pueda rechazarse o modificarse y puedan enfrentar razones para detener una iniciativa que puede dañar enormemente al sistema científico mexicano.<br><br>
+   <div class='home ' style="top: 5vh;">
+      <a href="index.html"><i class="fa fa-arrow-left"  style="color: green;"></i></a><br><br>
+
+      El proceso de extinción de fideicomisos en diferentes áreas, incluyendo los de ciencia y tecnología, ha concluido en la Cámara de Diputados. El 8 de octubre se aprobaron cambios legislativos que llevarán a la extinción de al menos 109 fideicomisos, incluyendo 91 con tema de ciencia y tecnología y la transferencia de sus recursos a la Tesorería de la Federación. La iniciativa es completamente oscura acerca de cómo podría regresar este presupuesto al ramo de ciencia y tecnología. Es muy preocupante que se eliminaran la totalidad de los fideicomisos en el CONACYT, lo cual deja completamente ambiguo cómo será la operación del sistema de fondos para apoyo a investigación en todas las áreas.
+
+<br>
+Llama la atención que ninguno de los fideicomisos de ciencia tienen observaciones graves, ninguna respecto al mal uso  de recursos.
+<br>
+Antes de que esta iniciativa pueda concretarse, es necesario que pase a un análisis en el Senado de la Republica, erigida como Cámara revisora. Será este el último momento donde la iniciativa pueda rechazarse o modificarse. Será el último momento donde se puedan enfrentar razones para detener una iniciativa que puede dañar enormemente al sistema científico mexicano.
+<br>                
+Las mesas directivas de 34 sociedades científicas, incluyendo la SMM, estamos proporcionando las direcciones electrónicas de los senadores para que quien así lo desee envíe un mensaje a los senadores.
+
 
       Tú puedes ayudarnos generando presión contra esta iniciativa. Envía automáticamente desde tu correo la <a href="carta.pdf" style="color: #0ddb15;text-decoration: none;">carta de protesta del director de la sociedad matemática mexicana </a>a 127 correos del Senado de la República.
       <br><br>
@@ -90,38 +91,10 @@
    function increment(){
      database.ref().update({count:parseInt(document.getElementById('counter').innerHTML) + 1});
    }
-     
-  var speed = 0.0000001;
-
-  /* Call this function with a string containing the ID name to
-   * the element containing the number you want to do a count animation on.*/
-  function incEltNbr(id) {
-    elt = document.getElementById(id);
-    endNbr = Number(document.getElementById(id).innerHTML);
-    incNbrRec(0, endNbr, elt);
-  }
-
-  /*A recursive function to increase the number.*/
-  function incNbrRec(i, endNbr, elt) {
-    if (i <= endNbr) {
-      elt.innerHTML = i;
-      setTimeout(function() {//Delay a bit before calling the function again.
-        incNbrRec(i + 32345610, endNbr, elt);
-      }, speed);
-    }
-  }
-
-  /*Function called on button click*/
-  function incNbr(){
-    incEltNbr("nbr");
-  }
-
-  incEltNbr("nbr"); /*Call this funtion with the ID-name for that element to increase the number within*/
-  incNbr();
-
+   
 </script>
 <footer>
-   <a href="policy.html">Sitio independiente no vinculado con alguna de las organizaciones mencionadas (politica de privacidad)</a>
+   <a href="policy.html">Sitio independiente no vinculado con alguna de las organizaciones mencionadas</a>
    <!-- <p><a href="mailto:hege@example.com">hege@example.com</a></p> -->
 </footer>
 </html>
