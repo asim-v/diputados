@@ -10,7 +10,7 @@ html{
 }
 
 body {
-  zoom:90%;
+  
   display: flex; /* establish flex container */
   justify-content: center; /* center flex items horizontally, in this case */
   align-items: center; /* center flex items vertically, in this case */  
@@ -32,28 +32,78 @@ body {
   /*position: absolute;*/
   top: 10vh;
   color: white;
-  border-radius: 50%;
-  padding: 1px;
+  border-radius: 100px;
+  padding: 6px;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: darkgrey;
+  background-color: #a9a9a92e;
 }
 
 .home{
     max-height: 80vh;
     position: absolute;
     text-align: left;
-    top: 45vh;
+    top: 40vh;
     width: 75%;
     vertical-align: middle;
     text-align: center;
     padding-bottom: 15px;
-    font-size: 30px;
+    font-size: 24px;
     font-family: 'Roboto';
     color:rgb(178, 171, 161);
 }
+.explanation{
+  
+  font-size: 22px;
+  width: 90%;
+  text-align: center;
+  height: 80%;
+  
+  vertical-align: middle;
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 24px;
+  font-family: 'Roboto';
+  color:rgb(178, 171, 161);
 
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
+}
+.goback{
+  color: #4bff006e;
+  font-size: 20px !important;
+}
+.explanation-container{
+  overflow-y: scroll;
+  height: 75vh;
+  position: relative;
+  width: 100%;
+}
+@media (max-width: 1500px){
+  .explanation{
+    font-size: 16.5px;
+  }
+}
+@media (max-width: 1200px){
+  .explanation{
+    font-size: 16.5px;
+  }
+}
+@media (max-width: 1000px){
+  body{
+    overflow-y:visible;
+  }
+  .explanation{
+    
+    font-size: 12px;
+    text-align: left;
+  }
+}
 /*BUTTON*/
 
 
@@ -373,7 +423,7 @@ body {
   position: absolute;
   color:rgb(205, 200, 194);
   text-align:center;
-  font-size: 50px;
+  font-size: 40px;
   padding-top: 30vh;
   
 }
@@ -383,16 +433,16 @@ body {
 }
 @media (max-width: 900px){
     .home{
-      font-size: 28px !important;
+      font-size: 20px !important;
     }
+
 }
 @media (max-width: 600px) {
   
   .titles{
     text-align:left;
-    font-size: 37px;
+    font-size: 34px;
     padding-left: 10px;
-    padding-top: 350px;
     
   }
   .mail-box{
@@ -408,38 +458,43 @@ body {
     width: 100%;
     
     
-    font-size: 15px;
+    font-size: 13px;
   }
    .home{
     width: 90%;
-    font-size: 25px !important;
+    font-size: 23px !important;
   }
 }
 @media (max-width: 561px) {
+  .hbutton{
+    height: 2.5rem;
+    width: 12rem;
+    font-size: 20px;
+  }
   :root{
     --mwidth:160px;
     --mheight:60px;
   }
   
   .titles{
-    width: 80%;
+    /*width: 80%;*/
     
     text-align:left;
-    font-size: 28px;
+    font-size: 25px;
     padding-left: -20px;
-    padding-top: 280px;
+    padding-top: 200px;
     
   }
   .ball{
     margin: 150px auto 0 !important;
-    font-size:45px !important;
+    font-size:40px !important;
   }
   .mail-box{
     padding-top: 0%;
   }
   .overlay{
     width: 50%;
-    font-size: 15px !important;
+    font-size: 13px !important;
   }
   .disclaimer{
     position: relative;
@@ -449,20 +504,22 @@ body {
     width: 100%;
     
     padding-right: 100px;
-    font-size: 12px;
+    font-size: 10px;
   }
   .home{
-    top: 49vh;
-    font-size: 13.5px !important;
+    top: 42vh;
+    font-size: 14px !important;
   }
 }
 @media (max-width: 321px){
-   .home{
-    top: 55vh;
-    font-size: 11px !important;
+ .home{
+    top: 42vh;
+    font-size: 12px !important;
   }
   .titles{
-    font-size: 23px;
+    padding-top: 170px;
+    padding-left: 0;
+    font-size: 20px;
   }
 }
 @media (max-width: 290px) {
@@ -470,7 +527,7 @@ body {
   .titles{
     
     text-align:left;
-    font-size: 30px;
+    font-size: 28px;
     padding-left: 10px;
     padding-top: 280px;
     
@@ -486,13 +543,13 @@ body {
     width: 36%;
     padding-left: 120px;
     padding-right: 100px;
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 .ball {
   bottom: calc(var(--mheight) + (var(--mheight))/2);
 
-  font-size: 60px;
+  font-size: 50px;
   transform: translate(-50%,50%);
   border-radius: 50%;
   margin: 200px auto 0;
@@ -506,7 +563,7 @@ body {
   padding: 15px;
   bottom: 50px;
   border-radius: 15px;
-  font-size: 30px;
+  font-size: 28px;
   left: 0; 
   text-align: center;
   left: 50%;
@@ -518,7 +575,7 @@ body {
   color: white;
   background-color: #0000004f;
   z-index: 10;
-  position: absolute;
+  position: fixed;
   display: inline;
   backdrop-filter:blur(5px) ;
 
@@ -693,7 +750,7 @@ body {
   }
 }
 footer a{
-  color: #454545;
+  color: #868686;
   top:0;
   z-index: 200;
   width: 100%;
@@ -702,7 +759,7 @@ footer a{
   text-align: center;
   position:fixed;
   left: 0;
-  font-size: 13px;
+  font-size: 10px;
 }
 input[type="button"]
 {
